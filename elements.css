@@ -1,0 +1,179 @@
+:root {
+	--modal-color: linear-gradient(10deg, rgba(54,54,54,1) 0%, rgba(67,80,91,1) 50%, rgba(89,83,84,1) 100%);
+	--popup-background: rgba(255, 255, 255, 0.56);
+	--popop-boxshadow: rgba(0, 0, 0, 0.16) 0px 2px 5px, rgba(0, 0, 0, 0.23) 0px 2px 5px;
+    --font-dark: #282828;
+}
+
+/* ------------------- RIGHT CLICK -------------------- */
+
+.right-click {
+    position: absolute;
+    border-radius: 5px;
+    background-color: rgb(253, 253, 253, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+    display: none;
+    padding: 5px 0px;
+    z-index: 1;
+}
+
+#right-click-menu {
+    list-style: none; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+#right-click-menu > li {
+    width: 100%;
+    padding: 8px 26px 8px 16px;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    font-family: 'Open Sans',serif;
+    font-size: 14px;
+}
+
+#right-click-menu > li > span {
+    padding-right: 10px;
+    color:rgb(49, 49, 49);
+	font-size: 21px;
+}
+
+#right-click-menu li:hover {
+    background-color: rgb(221, 221, 221)
+}
+
+/* ---------------- POP UP GENERAL ----------------**/ 
+
+.popup {
+	z-index: 1;
+}
+
+.modal-header {
+	height: 36px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	cursor: move;
+	border-radius: inherit;
+	border-bottom: 1px solid #b8b8b8;
+}
+
+.modal-header span {
+	color: var(--font-dark);
+	cursor: pointer;
+	padding: 7px 8px 5px 0px;
+	font-size: 23px;
+}
+
+.modal-header span:hover {
+	color: #4c4c4c;
+}
+
+/* ---------------- SETTINGS WINDOW ----------------**/ 
+
+#settingsWindow {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 500px;
+	min-height: 300px;
+	opacity: 0;
+	background-color: var(--popup-background);
+	top: 50%;
+	left: 50%;
+	margin-top: -245px;
+	margin-left: -320px;
+    pointer-events: none;
+	border-radius: 4px;
+	box-shadow: var(--popop-boxshadow);
+	padding-bottom: 5px;
+	backdrop-filter: blur(10px);
+}
+
+.settings-window-container {
+	display: flex;
+	flex-direction: row;
+}
+
+/* ---------------- USER POP UP WINDOW ----------------**/ 
+
+#usernamePromt {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 300px;
+	background-color: var(--popup-background);
+	top: 50%;
+	left: 50%;
+	margin-top: -125px;
+	margin-left: -200px;
+	opacity: 0;
+	pointer-events: none; 
+	border-radius: 1px;
+	box-shadow: var(--popop-boxshadow);
+	padding-bottom: 5px;
+}
+
+input[type=text], select {
+	width: 100%;
+	padding: 10px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+#close-button {
+	cursor: pointer;
+	font-size: 20px;
+	color: #ffffff;
+}
+
+#close-button:hover {
+    color:rgb(191, 191, 191);
+}
+
+
+#contentField {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.contentFieldElement {
+	font-size: medium;
+	height: 35px;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+}
+
+#inputError {
+	color:rgb(213, 71, 61);
+	font-size: 14px;
+	display: none;
+	visibility: hidden;
+	transition: 0.2s;
+}
+
+#username-ok-button {
+	background-color: rgb(23, 173, 98);
+	width: 70px;
+	height: 30px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 2px;
+	font-style: bold;
+    color: white;
+	cursor: pointer;
+}

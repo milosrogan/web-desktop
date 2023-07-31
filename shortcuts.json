@@ -1,0 +1,32 @@
+[
+    {
+        "title": "YouTube",
+        "url": "https://www.youtube.com",
+        "icon": "/images/youtube-icon.png"
+    },
+    {
+        "title": "Google",
+        "url": "https://www.google.me",
+        "icon": "/images/google-icon.png"
+    },
+    {
+        "title": "Linkedin",
+        "url": "https://www.linkedin.com",
+        "icon": "/images/linkedin-icon.jpg"
+    },
+    {
+        "title": "ChatGPT",
+        "url": "https://chat.openai.com",
+        "icon": "/images/chatgpt-icon.jpg"
+    },
+    {
+        "title": "Duolingo",
+        "url": "https://www.duolingo.com",
+        "icon": "/images/duolingo-icon.jpg"
+    },
+    {
+        "title": "Facebook",
+        "url": "https://www.facebook.com",
+        "icon": "/images/facebook-icon.png"
+    }
+]
